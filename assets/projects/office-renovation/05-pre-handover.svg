@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Pre handover stage placeholder">
+  <rect width="1200" height="780" fill="#f5efe4"/>
+  <rect x="122" y="120" width="956" height="540" rx="28" fill="#fffaf2" stroke="#c3923c" stroke-width="8"/>
+  <path d="M220 570h840M220 235h840" stroke="#d8c5a7" stroke-width="10"/>
+  <rect x="260" y="330" width="250" height="160" rx="18" fill="#24282c" opacity=".82"/>
+  <rect x="560" y="330" width="250" height="160" rx="18" fill="#c3923c" opacity=".78"/>
+  <path d="M885 355l38 38 80-92" fill="none" stroke="#ad7822" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

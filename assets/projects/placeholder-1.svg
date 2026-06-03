@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Residential finishing placeholder">
+  <rect width="1200" height="780" fill="#f5efe4"/>
+  <rect x="128" y="122" width="944" height="536" rx="30" fill="#fffaf2" stroke="#c3923c" stroke-width="8"/>
+  <path d="M220 560h860M220 245h860" stroke="#d8c5a7" stroke-width="9"/>
+  <rect x="280" y="332" width="285" height="172" rx="22" fill="#24282c" opacity=".82"/>
+  <rect x="630" y="294" width="230" height="210" rx="24" fill="#c3923c" opacity=".76"/>
+  <path d="M320 410h225M680 365h130M680 430h130" stroke="#fbf8f2" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="935" cy="252" r="42" fill="#c3923c" opacity=".22"/>
+</svg>

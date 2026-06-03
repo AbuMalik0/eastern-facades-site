@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">إضاءة داخلية</title>
+  <desc id="desc">صورة بديلة لإضاءة داخلية</desc>
+  <rect width="640" height="440" fill="#121820"/>
+  <path d="M76 78h488v254H76z" fill="#242c35"/>
+  <path d="M116 118h408v174H116z" fill="#f4ead9"/>
+  <path d="M156 156h328v94H156z" fill="#fffaf2"/>
+  <g fill="#d6a44a">
+    <path d="M188 78h16v76h-16zM436 78h16v76h-16z"/>
+    <circle cx="196" cy="164" r="30"/>
+    <circle cx="444" cy="164" r="30"/>
+  </g>
+  <path d="M0 332h640v108H0z" fill="#b89b74"/>
+  <path d="M116 332h408v18H116z" fill="#8d632f"/>
+</svg>

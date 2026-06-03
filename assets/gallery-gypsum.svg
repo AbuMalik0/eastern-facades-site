@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">ديكورات جبس</title>
+  <desc id="desc">صورة بديلة لديكورات جبس وأسقف</desc>
+  <rect width="640" height="440" fill="#f7f2ea"/>
+  <path d="M64 72h512v252H64z" fill="#20262f"/>
+  <path d="M108 108h424v174H108z" fill="#fffdf8"/>
+  <path d="M144 138h352v112H144z" fill="#e8ded0"/>
+  <path d="M178 166h284v56H178z" fill="#ffffff"/>
+  <g fill="#c9932f">
+    <circle cx="166" cy="120" r="8"/>
+    <circle cx="474" cy="120" r="8"/>
+    <circle cx="166" cy="270" r="8"/>
+    <circle cx="474" cy="270" r="8"/>
+  </g>
+  <path d="M0 324h640v116H0z" fill="#c6aa82"/>
+  <path d="M104 324h432v18H104z" fill="#93652f"/>
+</svg>

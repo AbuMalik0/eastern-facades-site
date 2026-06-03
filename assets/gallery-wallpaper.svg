@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">ورق حائط</title>
+  <desc id="desc">صورة بديلة لورق حائط</desc>
+  <rect width="640" height="440" fill="#f7f2ea"/>
+  <path d="M76 72h488v264H76z" fill="#1f2730"/>
+  <path d="M116 106h408v196H116z" fill="#efe3d0"/>
+  <g fill="none" stroke="#c9932f" stroke-width="5" opacity=".84">
+    <path d="M154 106c0 50 44 50 44 98s-44 50-44 98"/>
+    <path d="M246 106c0 50 44 50 44 98s-44 50-44 98"/>
+    <path d="M338 106c0 50 44 50 44 98s-44 50-44 98"/>
+    <path d="M430 106c0 50 44 50 44 98s-44 50-44 98"/>
+  </g>
+  <path d="M0 336h640v104H0z" fill="#b89b74"/>
+</svg>

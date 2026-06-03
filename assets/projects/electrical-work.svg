@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">تنفيذ أعمال كهربائية</title>
+  <desc id="desc">صورة مؤقتة لأعمال كهربائية وإضاءات</desc>
+  <rect width="640" height="420" fill="#efe6d6"/>
+  <path d="M72 62h496v250H72z" fill="#25211b"/>
+  <path d="M116 104h408v166H116z" fill="#fffaf2"/>
+  <path d="M156 140h140v24H156zM156 184h240v12H156zM156 212h190v12H156z" fill="#c3923c"/>
+  <path d="M428 132h54v96h-54z" fill="#2f3438"/>
+  <path d="M444 150h22v14h-22zM444 178h22v14h-22zM444 206h22v14h-22z" fill="#f1c66f"/>
+  <g fill="none" stroke="#c3923c" stroke-width="6" stroke-linecap="round">
+    <path d="M190 282c20 28 42 28 62 0"/>
+    <path d="M300 282c20 28 42 28 62 0"/>
+  </g>
+  <path d="M0 312h640v108H0z" fill="#b99b72"/>
+</svg>

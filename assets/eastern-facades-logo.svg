@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 170" role="img" aria-labelledby="title">
+  <title id="title">شعار الواجهات المشرقة</title>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6a63b"/>
+      <stop offset="0.42" stop-color="#b87b1f"/>
+      <stop offset="1" stop-color="#d8ac45"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#gold)" d="M23 153h24V95L23 106v47Z"/>
+  <path fill="url(#gold)" d="M55 153h24V80L55 91v62Z"/>
+  <path fill="url(#gold)" d="M87 153h24V64L87 77v76Z"/>
+  <path fill="url(#gold)" d="M119 153h18V23l-18 10v120Z"/>
+  <path fill="url(#gold)" d="M145 20v30l58 22V47L145 20Z"/>
+  <path fill="url(#gold)" d="M145 62v24l58 17V81l-58-19Z"/>
+  <path fill="url(#gold)" d="M145 97v22l58 13v-20l-58-15Z"/>
+  <path fill="url(#gold)" d="M145 130v23h58v-14l-58-9Z"/>
+</svg>

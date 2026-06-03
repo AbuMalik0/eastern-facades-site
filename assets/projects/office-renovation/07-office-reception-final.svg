@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Office and reception final stage placeholder">
+  <rect width="1200" height="780" fill="#f5efe4"/>
+  <rect x="118" y="116" width="964" height="544" rx="30" fill="#fffaf2" stroke="#c3923c" stroke-width="8"/>
+  <path d="M220 565h840M220 245h840" stroke="#d8c5a7" stroke-width="9"/>
+  <rect x="250" y="360" width="360" height="140" rx="20" fill="#24282c" opacity=".86"/>
+  <rect x="680" y="310" width="230" height="200" rx="22" fill="#c3923c" opacity=".78"/>
+  <path d="M295 420h260M720 375h150M720 430h150" stroke="#fbf8f2" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="955" cy="238" r="42" fill="#c3923c" opacity=".22"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Interior finishing and lighting placeholder">
+  <rect width="1200" height="780" fill="#ebe0cf"/>
+  <rect x="118" y="116" width="964" height="544" rx="30" fill="#fffaf2" stroke="#c3923c" stroke-width="8"/>
+  <path d="M215 235h870M215 570h870M260 235v335M540 235v335M820 235v335" stroke="#d8c5a7" stroke-width="8"/>
+  <path d="M330 330h360M330 405h290M330 480h420" stroke="#24282c" stroke-width="16" stroke-linecap="round" opacity=".7"/>
+  <circle cx="920" cy="370" r="82" fill="#c3923c" opacity=".18"/>
+  <path d="M880 370h80M920 330v80" stroke="#ad7822" stroke-width="16" stroke-linecap="round"/>
+</svg>

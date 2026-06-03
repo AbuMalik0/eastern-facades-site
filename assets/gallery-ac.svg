@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">تكييف</title>
+  <desc id="desc">صورة بديلة لأعمال التكييف</desc>
+  <rect width="640" height="440" fill="#f6f2ea"/>
+  <path d="M78 78h484v258H78z" fill="#1c2530"/>
+  <path d="M140 126h360v94H140z" fill="#ffffff"/>
+  <path d="M168 154h150v14H168zM168 186h254v10H168z" fill="#8e99a3"/>
+  <circle cx="452" cy="158" r="24" fill="#c9932f"/>
+  <g fill="none" stroke="#d7e0e2" stroke-width="8" stroke-linecap="round">
+    <path d="M214 250c-34 26-34 48 0 74"/>
+    <path d="M320 250c-34 26-34 48 0 74"/>
+    <path d="M426 250c-34 26-34 48 0 74"/>
+  </g>
+  <path d="M0 336h640v104H0z" fill="#b89b74"/>
+</svg>

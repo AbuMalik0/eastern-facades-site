@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Demolition stage placeholder">
+  <rect width="1200" height="780" fill="#ebe0cf"/>
+  <rect x="122" y="132" width="956" height="516" rx="24" fill="#fffaf2" stroke="#c3923c" stroke-width="8"/>
+  <path d="M220 555h840M220 250h680" stroke="#d8c5a7" stroke-width="10" stroke-linecap="round"/>
+  <path d="M280 315l120 120M400 315 280 435M525 300l160 160M685 300 525 460" stroke="#24282c" stroke-width="18" stroke-linecap="round" opacity=".75"/>
+  <path d="M805 505h130l-32-110h-66z" fill="#c3923c" opacity=".8"/>
+  <path d="M820 505h100" stroke="#ad7822" stroke-width="16" stroke-linecap="round"/>
+</svg>

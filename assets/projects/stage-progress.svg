@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img" aria-labelledby="title desc">
+  <title id="title">أثناء التنفيذ</title>
+  <desc id="desc">صورة مؤقتة لمرحلة أثناء التنفيذ</desc>
+  <rect width="420" height="280" fill="#f7f0e4"/>
+  <path d="M44 54h332v158H44z" fill="#25211b"/>
+  <path d="M74 84h272v100H74z" fill="#efe6d6"/>
+  <path d="M104 114h214v16H104zM104 150h160v10H104z" fill="#c3923c"/>
+  <g fill="none" stroke="#d7e0e2" stroke-width="7" stroke-linecap="round">
+    <path d="M128 196c24-22 48-22 72 0"/>
+    <path d="M226 196c24-22 48-22 72 0"/>
+  </g>
+  <path d="M0 212h420v68H0z" fill="#b99b72"/>
+</svg>

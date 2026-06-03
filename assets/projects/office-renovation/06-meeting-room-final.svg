@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-label="Meeting room final stage placeholder">
+  <rect width="1200" height="780" fill="#ebe0cf"/>
+  <rect x="110" y="118" width="980" height="540" rx="30" fill="#fffaf2" stroke="#c3923c" stroke-width="8"/>
+  <path d="M190 250h900M190 560h900" stroke="#d8c5a7" stroke-width="8"/>
+  <rect x="290" y="390" width="620" height="110" rx="28" fill="#24282c" opacity=".86"/>
+  <rect x="360" y="310" width="480" height="70" rx="20" fill="#c3923c" opacity=".8"/>
+  <path d="M360 450h480M430 580v-150M770 580v-150" stroke="#fbf8f2" stroke-width="16" stroke-linecap="round" opacity=".9"/>
+  <circle cx="600" cy="245" r="34" fill="#c3923c" opacity=".52"/>
+</svg>

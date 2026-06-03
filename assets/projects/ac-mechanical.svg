@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">أعمال ميكانيكية وتكييف</title>
+  <desc id="desc">صورة مؤقتة لأعمال التكييف والميكانيكا</desc>
+  <rect width="640" height="420" fill="#f5efe4"/>
+  <path d="M76 66h488v250H76z" fill="#25211b"/>
+  <path d="M138 118h364v88H138z" fill="#ffffff"/>
+  <path d="M166 146h150v14H166zM166 176h250v10H166z" fill="#8e99a3"/>
+  <circle cx="454" cy="150" r="24" fill="#c3923c"/>
+  <g fill="none" stroke="#d7e0e2" stroke-width="8" stroke-linecap="round">
+    <path d="M216 238c-34 26-34 48 0 74"/>
+    <path d="M320 238c-34 26-34 48 0 74"/>
+    <path d="M424 238c-34 26-34 48 0 74"/>
+  </g>
+  <path d="M0 316h640v104H0z" fill="#b99b72"/>
+</svg>

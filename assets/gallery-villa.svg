@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">تشطيب فيلا</title>
+  <desc id="desc">صورة بديلة لتشطيب فيلا</desc>
+  <rect width="640" height="440" fill="#edf1ef"/>
+  <path d="M64 188L320 54l256 134v166H64z" fill="#faf5eb"/>
+  <path d="M42 188h556L320 40z" fill="#141b23"/>
+  <path d="M106 212h126v118H106zM408 212h126v118H408z" fill="#ffffff"/>
+  <path d="M268 218h104v136H268z" fill="#20262f"/>
+  <path d="M136 238h64v62h-64zM438 238h64v62h-64z" fill="#d7e0e2"/>
+  <path d="M0 354h640v86H0z" fill="#b89b74"/>
+  <path d="M84 354h472v24H84z" fill="#c9932f"/>
+</svg>

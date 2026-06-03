@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">دهانات داخلية</title>
+  <desc id="desc">صورة بديلة لأعمال دهانات داخلية</desc>
+  <rect width="640" height="440" fill="#efe7d9"/>
+  <path d="M0 320h640v120H0z" fill="#c7ad86"/>
+  <path d="M76 68h488v252H76z" fill="#17202a"/>
+  <path d="M116 106h196v178H116z" fill="#f8f5ef"/>
+  <path d="M340 106h184v178H340z" fill="#fffaf2"/>
+  <path d="M144 138h136v28H144zM144 194h116v14H144zM144 226h88v14H144z" fill="#c9932f"/>
+  <path d="M366 138h132v104H366z" fill="#d9e0df"/>
+  <path d="M384 242l38-54 42 34 22-26 32 46z" fill="#77848e"/>
+  <path d="M76 320h488v24H76z" fill="#93652f"/>
+</svg>

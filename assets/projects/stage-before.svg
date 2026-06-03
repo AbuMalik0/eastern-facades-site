@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="280" viewBox="0 0 420 280" role="img" aria-labelledby="title desc">
+  <title id="title">قبل التنفيذ</title>
+  <desc id="desc">صورة مؤقتة لمرحلة قبل التنفيذ</desc>
+  <rect width="420" height="280" fill="#eee4d4"/>
+  <path d="M44 52h332v160H44z" fill="#2b2925"/>
+  <path d="M72 82h128v100H72zM224 82h124v100H224z" fill="#d7cab9"/>
+  <path d="M0 212h420v68H0z" fill="#b99b72"/>
+  <path d="M72 198h276v18H72z" fill="#8f714f"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">ترميم فيلا سكنية</title>
+  <desc id="desc">صورة مؤقتة لمشروع ترميم وتشطيب فيلا</desc>
+  <rect width="640" height="420" fill="#f7f0e4"/>
+  <path d="M0 312h640v108H0z" fill="#b99b72"/>
+  <path d="M70 178L320 48l250 130v160H70z" fill="#fff8ec"/>
+  <path d="M44 178h552L320 34z" fill="#25211b"/>
+  <path d="M110 210h122v104H110zM408 210h122v104H408z" fill="#ffffff"/>
+  <path d="M268 216h104v122H268z" fill="#2b2925"/>
+  <path d="M138 236h64v52h-64zM438 236h64v52h-64z" fill="#d9e0df"/>
+  <path d="M86 338h468v22H86z" fill="#c3923c"/>
+</svg>

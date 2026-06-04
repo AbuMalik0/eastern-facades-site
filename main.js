@@ -11,6 +11,8 @@
   const projects = Array.isArray(config.projects) ? config.projects : [];
   const googleAdsConversionLabels = config.googleAdsConversionLabels || {};
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  const googleAdsId = "AW-18214629470";
+  const googleAdsEventTimeout = 500;
   const escapeHtml = (value) =>
     String(value ?? "").replace(/[&<>"']/g, (char) => {
       const entities = {
@@ -23,19 +25,87 @@
       return entities[char];
     });
 
-  const trackGoogleAdsEvent = (eventName, conversionLabel) => {
+  const isPhoneDevice = () => {
+    const userAgent = navigator.userAgent || "";
+    const isIPad =
+      /iPad/i.test(userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const isTablet =
+      isIPad ||
+      /Tablet|PlayBook|Silk/i.test(userAgent) ||
+      (/Android/i.test(userAgent) && !/Mobile/i.test(userAgent));
+    const isPhoneUserAgent = /Mobi|iPhone|iPod|Android.*Mobile|Windows Phone/i.test(userAgent);
+    const isCompactTouch = window.matchMedia("(max-width: 767px) and (pointer: coarse)").matches;
+    const isUserAgentMobile = navigator.userAgentData?.mobile === true;
+
+    return !isTablet && (isUserAgentMobile || isPhoneUserAgent || isCompactTouch);
+  };
+
+  const trackGoogleAdsEvent = (eventName, conversionLabel, eventCallback) => {
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       if (conversionLabel) {
         window.gtag("event", "conversion", {
-          send_to: `AW-18214629470/${conversionLabel}`,
+          send_to: `${googleAdsId}/${conversionLabel}`,
+          event_callback: eventCallback,
+          event_timeout: googleAdsEventTimeout,
         });
       } else {
         window.gtag("event", eventName, {
           event_category: "engagement",
           event_label: eventName,
+          event_callback: eventCallback,
+          event_timeout: googleAdsEventTimeout,
         });
       }
+    } else if (typeof eventCallback === "function") {
+      eventCallback();
     }
+  };
+
+  const getTrackedLinkEvent = (href) => {
+    const normalizedHref = href.toLowerCase();
+    if (normalizedHref.startsWith("tel:")) return "phone_click";
+    if (
+      normalizedHref.includes("wa.me/") ||
+      normalizedHref.includes("api.whatsapp.com/") ||
+      normalizedHref.includes("whatsapp://")
+    ) {
+      return "whatsapp_click";
+    }
+    return "";
+  };
+
+  const getTrackedNavigation = (link, href) => {
+    const target = link.getAttribute("target");
+    const shouldOpenNewContext = target && target !== "_self";
+    const pendingWindow = shouldOpenNewContext ? window.open("about:blank", target) : null;
+
+    return () => {
+      if (pendingWindow && !pendingWindow.closed) {
+        pendingWindow.opener = null;
+        pendingWindow.location.href = href;
+        return;
+      }
+
+      if (shouldOpenNewContext) {
+        window.open(href, target, "noopener");
+        return;
+      }
+
+      window.location.href = href;
+    };
+  };
+
+  const trackAndThen = (eventName, conversionLabel, callback) => {
+    let callbackWasCalled = false;
+    const done = () => {
+      if (callbackWasCalled) return;
+      callbackWasCalled = true;
+      callback();
+    };
+
+    window.setTimeout(done, googleAdsEventTimeout);
+    trackGoogleAdsEvent(eventName, conversionLabel, done);
   };
 
   const initGoogleAdsClickTracking = () => {
@@ -44,21 +114,20 @@
       if (!link) return;
 
       const href = link.getAttribute("href") || "";
-      const normalizedHref = href.toLowerCase();
+      const eventName = getTrackedLinkEvent(href);
+      if (!eventName) return;
 
-      if (normalizedHref.startsWith("tel:")) {
-        trackGoogleAdsEvent("phone_click", googleAdsConversionLabels.phone_click);
+      const conversionLabel = googleAdsConversionLabels[eventName];
+      const shouldDelayNavigation = eventName === "whatsapp_click" || (eventName === "phone_click" && isPhoneDevice());
+
+      if (!shouldDelayNavigation) {
+        trackGoogleAdsEvent(eventName, conversionLabel);
         return;
       }
 
-      if (
-        normalizedHref.includes("wa.me/") ||
-        normalizedHref.includes("api.whatsapp.com/") ||
-        normalizedHref.includes("whatsapp://")
-      ) {
-        trackGoogleAdsEvent("whatsapp_click", googleAdsConversionLabels.whatsapp_click);
-      }
-    });
+      event.preventDefault();
+      trackAndThen(eventName, conversionLabel, getTrackedNavigation(link, link.href || href));
+    }, true);
   };
 
   const fallbackAttribute = (fallbackImage) =>
@@ -112,22 +181,6 @@
 
     if (!notice) return;
     if (noticeNumber) noticeNumber.textContent = phoneDisplay;
-
-    const isPhoneDevice = () => {
-      const userAgent = navigator.userAgent || "";
-      const isIPad =
-        /iPad/i.test(userAgent) ||
-        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-      const isTablet =
-        isIPad ||
-        /Tablet|PlayBook|Silk/i.test(userAgent) ||
-        (/Android/i.test(userAgent) && !/Mobile/i.test(userAgent));
-      const isPhoneUserAgent = /Mobi|iPhone|iPod|Android.*Mobile|Windows Phone/i.test(userAgent);
-      const isCompactTouch = window.matchMedia("(max-width: 767px) and (pointer: coarse)").matches;
-      const isUserAgentMobile = navigator.userAgentData?.mobile === true;
-
-      return !isTablet && (isUserAgentMobile || isPhoneUserAgent || isCompactTouch);
-    };
 
     const resetCopyButton = () => {
       if (!copyButton) return;

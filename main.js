@@ -9,6 +9,7 @@
     config.whatsappMessage ||
     "السلام عليكم، أرغب بالاستفسار عن خدمات الواجهات المشرقة للمقاولات والديكورات.";
   const projects = Array.isArray(config.projects) ? config.projects : [];
+  const googleAdsConversionLabels = config.googleAdsConversionLabels || {};
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
   const escapeHtml = (value) =>
     String(value ?? "").replace(/[&<>"']/g, (char) => {
@@ -21,6 +22,44 @@
       };
       return entities[char];
     });
+
+  const trackGoogleAdsEvent = (eventName, conversionLabel) => {
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      if (conversionLabel) {
+        window.gtag("event", "conversion", {
+          send_to: `AW-18214629470/${conversionLabel}`,
+        });
+      } else {
+        window.gtag("event", eventName, {
+          event_category: "engagement",
+          event_label: eventName,
+        });
+      }
+    }
+  };
+
+  const initGoogleAdsClickTracking = () => {
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest?.("a[href]");
+      if (!link) return;
+
+      const href = link.getAttribute("href") || "";
+      const normalizedHref = href.toLowerCase();
+
+      if (normalizedHref.startsWith("tel:")) {
+        trackGoogleAdsEvent("phone_click", googleAdsConversionLabels.phone_click);
+        return;
+      }
+
+      if (
+        normalizedHref.includes("wa.me/") ||
+        normalizedHref.includes("api.whatsapp.com/") ||
+        normalizedHref.includes("whatsapp://")
+      ) {
+        trackGoogleAdsEvent("whatsapp_click", googleAdsConversionLabels.whatsapp_click);
+      }
+    });
+  };
 
   const fallbackAttribute = (fallbackImage) =>
     fallbackImage ? ` data-fallback-image="${escapeHtml(fallbackImage)}"` : "";
@@ -835,6 +874,7 @@
   };
 
   setContactLinks();
+  initGoogleAdsClickTracking();
   initCallNotice();
   initMobileMenu();
   initAnchorScrolling();

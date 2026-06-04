@@ -11,8 +11,8 @@ window.EASTERN_FACADES_CONFIG = {
   whatsappNumber: "966554061861", // استبدلها برقم واتساب بدون علامة +.
   businessHours: "تحدد لاحقاً", // استبدلها بساعات العمل، مثل: السبت - الخميس، 9 صباحاً - 9 مساءً.
   googleAdsConversionLabels: {
-    phone_click: "",
-    whatsapp_click: "",
+    phone_click: "ioYFCP2zgrkcEN7gtO1D",
+    whatsapp_click: "bfKeCPqzgrkcEN7gtO1D",
   },
   whatsappMessage:
     "السلام عليكم، أرغب بالاستفسار عن خدمات الواجهات المشرقة للمقاولات والديكورات.",

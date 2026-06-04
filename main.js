@@ -558,21 +558,44 @@
 
     const facts = Array.isArray(project.facts) ? project.facts : [];
     const stages = Array.isArray(project.stages) ? project.stages : [];
+    const approvedStageLabels = [
+      "المعاينة الأولية",
+      "التكسير والإزالة",
+      "التجهيز والتأسيس",
+      "أعمال التشطيب",
+      "ما قبل التسليم",
+    ];
+    const stageLabelAliases = new Map([
+      ["المعاينة الأولية", "المعاينة الأولية"],
+      ["أعمال التكسير والإزالة", "التكسير والإزالة"],
+      ["إزالة التشطيبات القديمة", "التكسير والإزالة"],
+      ["التكسير والإزالة", "التكسير والإزالة"],
+      ["بداية التنفيذ والمعالجة", "التجهيز والتأسيس"],
+      ["أعمال المعالجة والتأسيس", "التجهيز والتأسيس"],
+      ["أعمال التأسيس والتجهيز", "التجهيز والتأسيس"],
+      ["التجهيز والتأسيس", "التجهيز والتأسيس"],
+      ["أعمال التشطيبات", "أعمال التشطيب"],
+      ["أعمال التشطيب", "أعمال التشطيب"],
+      ["تجهيز الأسقف والحوائط قبل الدهان", "أعمال التشطيب"],
+      ["مرحلة ما قبل التسليم", "ما قبل التسليم"],
+      ["ما قبل التسليم", "ما قبل التسليم"],
+    ]);
+    const normalizeStageLabel = (label) => stageLabelAliases.get(label) || "";
     const journeyStageContent = [
       {
         label: "المعاينة الأولية",
         description: "تقييم الموقع وتحديد احتياج العمل قبل بدء التنفيذ.",
       },
       {
-        label: "أعمال التكسير والإزالة",
+        label: "التكسير والإزالة",
         description: "إزالة التشطيبات القديمة وتجهيز الموقع للمرحلة التالية.",
       },
       {
-        label: "بداية التنفيذ والمعالجة",
+        label: "التجهيز والتأسيس",
         description: "معالجة الأسطح وتنظيم الأعمال التأسيسية قبل التشطيب.",
       },
       {
-        label: "أعمال التشطيبات",
+        label: "أعمال التشطيب",
         description: "تنفيذ أعمال الجبس والدهان والإضاءات حسب متطلبات المشروع.",
       },
       {
@@ -581,12 +604,27 @@
       },
     ];
     const useProjectStageContent = project.useProjectStageContent === true;
-    const stageContent = useProjectStageContent ? stages : journeyStageContent;
-    const journeyStages = stages.slice(0, stageContent.length).map((stage, stageIndex) => ({
-      ...stage,
-      label: useProjectStageContent ? stage.label : stageContent[stageIndex].label,
-      description: useProjectStageContent ? stage.description : stageContent[stageIndex].description,
-    }));
+    const normalizeProjectStages = (projectStages) =>
+      projectStages
+        .map((stage, originalIndex) => {
+          const label = normalizeStageLabel(stage.label);
+          return {
+            ...stage,
+            label,
+            originalIndex,
+            stageOrder: approvedStageLabels.indexOf(label),
+          };
+        })
+        .filter((stage) => stage.label && stage.stageOrder >= 0 && stage.image)
+        .sort((first, second) => first.stageOrder - second.stageOrder || first.originalIndex - second.originalIndex)
+        .map(({ originalIndex, stageOrder, ...stage }) => stage);
+    const journeyStages = useProjectStageContent
+      ? normalizeProjectStages(stages)
+      : stages.slice(0, journeyStageContent.length).map((stage, stageIndex) => ({
+          ...stage,
+          label: journeyStageContent[stageIndex].label,
+          description: journeyStageContent[stageIndex].description,
+        }));
     const finalGallery = Array.isArray(project.finalImages) && project.finalImages.length
       ? project.finalImages
       : stages.slice(-4);
